@@ -3,11 +3,11 @@
 
 int main()
 {
-	int lotteryin = 0;
-	printf("lotteryin-\n");
+	int LI = 0;
+	printf("lottery in-\n");
 	for (int i = 0; i < 7; i++) {
-		lotteryin = rand() % 46;
-		printf("%d\n", lotteryin);
+		LI = rand() % 46;
+		printf("%d\n", LI);
 	}
 	
 	int WN = 0;
@@ -17,10 +17,10 @@ int main()
 		printf("%d\n", WN);
 	}
 	
-	if (lotteryin == WN) {
+	if (LI == WN) {
 			printf("Congratulation!");
 		}
-	else if (lotteryin != WN) {
+	else if (LI != WN) {
 			printf("Failed.");
 		}
 	return 0;
