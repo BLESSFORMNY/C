@@ -131,6 +131,7 @@ menu: ;
 		int i;
 		
 		qsort(emp, num, sizeof(struct employee), compare_name);
+		printf("List that is arranged by alphabetical order is this:");
 		for (i = 0; i < num; i++)
 		{
 			printf("Name: %s, ID: %d, Department: %s, Salary: %.2f\n", emp[i].name, emp[i].employee_ID, emp[i].department, emp[i].salary);
@@ -143,7 +144,7 @@ menu: ;
 	
 	char YN2[50];
 	
-	printf("\n\nDo you want to see more?(Y/N)\n\n");
+	printf("\nDo you want to see more?(Y/N)\n\n");
 	scanf("%s", YN2);
 	if (strcmp(YN2, "Y") == 0 || strcmp(YN2, "y") == 0)
 	{
