@@ -118,7 +118,7 @@ int main()
 	}
 	
 	
-	while (1)
+	while (1) // 평문 입력, 평문의 조건(N보다 작은 수) 판별 
 	{
 		printf("암호화하고 싶은 평문(숫자)을 입력해주세요.\n");
 		printf("plaintext: ");
@@ -142,7 +142,7 @@ int main()
 	
 	cipher = pow(plaintext, e) % N;
 	
-	printf("%d", cipher);
+	printf("암호문: %d", cipher);
 	
 	return 0;
 }
