@@ -1,12 +1,14 @@
 #include <stdio.h>
+#include <math.h>
 
 int main()
 {
 	int p, q;
 	int N, phi;
 	int e, d;
+	int plaintext, cipher;
 	int i, j, k;
-	int prime_p, prime_q, e_phi, d_ephi;
+	int prime_p, prime_q, e_phi, d_ephi, pt_N;
 	
 	while (1) // p, q 입력, p, q의 소수 판별 
 	{
@@ -114,6 +116,33 @@ int main()
 		
 		break;
 	}
+	
+	
+	while (1)
+	{
+		printf("암호화하고 싶은 평문(숫자)을 입력해주세요.\n");
+		printf("plaintext: ");
+		scanf("%d", &plaintext);
+		
+		pt_N = 1;
+		
+		if (plaintext >= N)
+		{
+			pt_N = 0;
+		}
+		
+		if (pt_N != 1)
+		{
+			printf("\n평문은 N = %d보다 작아야 합니다. 다시 입력해주세요.\n\n", N);
+			continue;
+		}
+		
+		break;
+	}
+	
+	cipher = pow(plaintext, e) % N;
+	
+	printf("%d", cipher);
 	
 	return 0;
 }
